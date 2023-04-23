@@ -1,0 +1,33 @@
+/workspace/solana-curriculum$
+/workspace/solana-curriculum$
+/workspace/solana-curriculum$
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 1 cd learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 2 sh -c "$(curl -sSfL https://release.solana.com/v1.14.7/install)"
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 3 solana --version
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 4 solana --help
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 5 solana config get
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 6 solana config set --url localhost
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 7 solana config get
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 8 cat ~/.config/solana/cli/config.yml
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 9 solana-keygen new
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 10 cat ~/.config/solana/id.json
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 10 cat ~/.config/solana/id.json
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 11 solana address
+/workspace/solana-curriculum$
+/workspace/solana-curriculum$ 1 solana-test-validator
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 12 curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"getBalance","params":["J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj",{"commitment":"finalized"}]}' http://localhost:8899
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 12 curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"getBalance","params":["J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj",{"commitment":"finalized"}]}' http://localhost:8899
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 13 solana balance J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 14 solana airdrop 1 J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 15 solana balance J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract/src/program-rust$ 16 cd src/program-rust/
+/workspace/solana-curriculum$ 1 solana-test-validator
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract/src/program-rust$ 17 cargo build
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract/src/program-rust$ 17 cargo build
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract/src/program-rust$ 18 cargo build-sbf --sbf-out-dir=../../dist/program
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract/src/program-rust$ 18 cargo build-sbf --sbf-out-dir=../../dist/program
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract/src$ 19 cd ..
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 19 cd ..
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 20 solana program deploy dist/program/helloworld.so
+/workspace/solana-curriculum/learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract$ 21 solana program show 9YqazEvcLrLu5rDUth5awzGNDXsH8F2CLELd66VigjHP
+/workspace/solana-curriculum$

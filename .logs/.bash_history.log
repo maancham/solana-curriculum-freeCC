@@ -1,1 +1,23 @@
 
+cd learn-how-to-set-up-solana-by-building-a-hello-world-smart-contract
+sh -c "$(curl -sSfL https://release.solana.com/v1.14.7/install)"
+solana --version
+solana --help
+solana config get
+solana config set --url localhost
+solana config get
+cat ~/.config/solana/cli/config.yml
+solana-keygen new
+cat ~/.config/solana/id.json 
+solana address
+solana-test-validator
+curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc":"2.0","id":1,"method":"getBalance","params":["J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj",{"commitment":"finalized"}]}' http://localhost:8899
+solana balance J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj
+solana airdrop 1 J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj
+solana balance J6eWHVkJ3WpDozXjTxsYhUerFhh6vVD9nAmnGfYb7ndj
+cd src/program-rust/
+cargo build
+cargo build-sbf --sbf-out-dir=../../dist/program
+cd ..
+solana program deploy dist/program/helloworld.so
+solana program show 9YqazEvcLrLu5rDUth5awzGNDXsH8F2CLELd66VigjHP
